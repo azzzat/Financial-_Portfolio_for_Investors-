@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>Your Financial Portfolio</h1>
+
+  <form method="POST" action="/portfolio">
+    <input type="text" name="name" placeholder="Stock Symbol" required>
+    <input type="number" step="any" name="amount" placeholder="Number of Shares" required>
+    <input type="number" step="any" name="price" placeholder="Purchase Price" required>
+    <button type="submit">Add Stock</button>
+  </form>
+
+  <h2>Portfolio</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Purchase Price</th>
+      <th>Current Price</th>
+      <th>ROI (%)</th>
+      <th>Total Value</th>
+      <th>Action</th>
+    </tr>
+    {% for stock in portfolio %}
+    <tr>
+      <td>{{ stock.name }}</td>
+      <td>{{ stock.amount }}</td>
+      <td>{{ stock.purchase_price }}</td>
+      <td>{{ stock.current_price }}</td>
+      <td>{{ stock.roi }}</td>
+      <td>{{ stock.total_value }}</td>
+      <td>
+        <button class="delete-btn" onclick="deleteStock({{ stock.id }})">Delete</button>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <div class="summary">
+    <h2>Total Portfolio Value: ${{ total_value }}</h2>
+    <h2>Portfolio ROI: {{ portfolio_roi }}%</h2>
+    <h2>Portfolio Diversification Index: {{ diversification_index }}</h2>
+  </div>
+
+</div>
+</body>
+</html>

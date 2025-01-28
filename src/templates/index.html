@@ -1,27 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Web App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Financial Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-
 <div class="container">
-    <h1>Welcome !!!</h1>
-    <form action="/echo_user_input" method="POST">
-        <input type="text" name="user_input" id="user_input" placeholder="Enter something..." required>
-        <input type="submit" value="Submit">
-    </form>
-    {% if input_text %}
-    <div class="result">
-        <p>You entered: {{ input_text }}</p>
-    </div>
-    {% endif %}
+    <h1>Welcome to the Financial Portfolio App</h1>
+    <a href="/portfolio" class="view-portfolio-btn">View Portfolio</a>
 </div>
-
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
 </body>
 </html>

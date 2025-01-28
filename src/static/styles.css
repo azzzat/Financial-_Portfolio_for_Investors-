@@ -1,0 +1,166 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.view-portfolio-btn {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-portfolio-btn:hover {
+    background-color: #0056b3;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form input, form button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e9ecef;
+}
+
+.summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.summary p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.summary table {
+    margin-top: 20px;
+}
+
+.summary table th, .summary table td {
+    text-align: left;
+}
+
+.summary table th {
+    width: 60%;
+}
+
+.summary table td {
+    width: 40%;
+}
+
+section {
+    margin-top: 40px;
+}
+
+form button[type="submit"] {
+    background-color: #dc3545;
+    border: none;
+}
+
+form button[type="submit"]:hover {
+    background-color: #c82333;
+}
+
+a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
