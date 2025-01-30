@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__, template_folder='./templates')
 
 # Alpha Vantage API Key
-API_KEY = "QKTQZFPRS4K252MM"
+API_KEY = "your apikey"
 
 # Database setup
 def create_table():
